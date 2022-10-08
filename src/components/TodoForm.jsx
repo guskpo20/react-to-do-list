@@ -10,30 +10,15 @@ function TodoForm({ todo, setTodo, todoList, setTodoList }) {
       return;
     }
     setError(false);
+
+    console.log('Creando');
+    // Nuevo registro
     let todoNuevo = {
       text: todo,
       id: generarId(),
     };
-    let newTodoList = [todoNuevo, ...todoList];
-    setTodoList(newTodoList);
+    setTodoList([...todoList, todoNuevo]);
     setTodo('');
-
-    /* Para Editar o crear Nuevo
-    if(paciente.id) {
-            // Editando el Registro
-            objetoPaciente.id = paciente.id
-            const pacientesActualizados = pacientes.map( pacienteState => pacienteState.id === paciente.id ? objetoPaciente : pacienteState )
-
-            setPacientes(pacientesActualizados)
-            setPaciente({})
-
-        } else {
-            // Nuevo registro
-            objetoPaciente.id = generarId();
-            setPacientes([...pacientes, objetoPaciente]);
-        }
-
-    */
   };
 
   return (

@@ -33,11 +33,10 @@ function App() {
         setTodoList={setTodoList}
       />
       <TodoList
-        todo={todo}
         setTodo={setTodo}
         todoList={todoList}
-        setTodoList={setTodoList}
         eliminarTodo={eliminarTodo}
+        setTodoList={setTodoList}
       />
     </div>
   );
