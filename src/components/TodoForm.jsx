@@ -22,7 +22,7 @@ function TodoForm({ todo, setTodo, todoList, setTodoList }) {
   };
 
   return (
-    <div className="bg-dark w-full flex justify-center mt-28 mb-16">
+    <div className="bg-dark w-full flex justify-center pt-28 mb-16">
       <div className="w-full max-w-xs">
         <h2 className="font-black text-3xl text-center mb-5">
           Tus <span className="text-blue-600">Tareas</span> Para Hoy!

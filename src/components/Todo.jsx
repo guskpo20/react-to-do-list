@@ -38,32 +38,35 @@ function Todo({ todo, todoList, setTodoList }) {
   };
 
   return (
-    <div className="flex w-full justify-center">
-      <div
-        className={`flex w-96  align-middle hover:cursor-pointer my-5 py-10 px-10font-black rounded-lg ${
-          complete
-            ? `hover:bg-green-900 bg-green-500 justify-around`
-            : ` hover:bg-blue-900 bg-blue-600 font-black justify-between`
-        } shadow-xl `}
-        id={todo.id}
-        onClick={handleComplete}
-      >
-        {!complete ? (
+    <div className="flex w-full justify-center  align-middle">
+      {!complete ? (
+        <div className=" h-auto rounded-l-lg w-16 flex justify-center my-auto">
           <AiOutlineEdit
-            className="text-yellow-600 font-bold hover:text-yellow-900 hover:cursor-pointer ml-5"
+            className="text-yellow-600  font-bold hover:text-yellow-900 hover:cursor-pointer "
             size={35}
             onClick={() => handleEdit(todo.id)}
           />
-        ) : (
-          <></>
-        )}
-        <h3 className={`  rounded-lg text-white text-center max-char`}>
+        </div>
+      ) : (
+        <></>
+      )}
+      <div
+        className={`flex w-96  hover:cursor-pointer my-5 py-10 font-black justify-center ${
+          complete
+            ? `hover:bg-green-900 bg-green-500`
+            : ` hover:bg-slate-300 bg-slate-400 font-black `
+        } shadow-xl rounded-lg`}
+        id={todo.id}
+        onClick={handleComplete}
+      >
+        <h3 className={`rounded-lg text-blue-600 text-center max-char`}>
           {todo.text}
         </h3>
-
+      </div>
+      <div className=" h-auto rounded-l-lg w-16 flex justify-center my-auto">
         <RiDeleteBinLine
           onClick={() => handleDelete(todo.id)}
-          className="text-red-600 font-bold hover:text-red-900 hover:cursor-pointer mr-5"
+          className=" text-red-600 font-bold hover:text-red-900 hover:cursor-pointer "
           size={35}
         />
       </div>

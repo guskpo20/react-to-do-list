@@ -7,8 +7,9 @@ function TodoList({ setTodo, todoList, eliminarTodo, setTodoList }) {
         <>
           <h2 className="font-black text-3xl text-center">Listado Tareas</h2>
           <p className="text-xl mt-5 mb-10 text-center">
-            Administra tus {''}
+            Para completar tus {''}
             <span className="text-blue-600 font-bold ">Tareas</span>
+            {''} haz click sobre ellas
           </p>
           {todoList.map((todo) => (
             <Todo

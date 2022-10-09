@@ -25,7 +25,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="bg-slate-300 h-screen">
       <TodoForm
         todo={todo}
         setTodo={setTodo}
