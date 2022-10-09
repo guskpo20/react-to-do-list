@@ -2,13 +2,21 @@ import { useState } from 'react';
 import { RiDeleteBinLine } from 'react-icons/ri';
 import { AiOutlineEdit } from 'react-icons/ai';
 
-function Todo({ todo, todoList, setTodoList }) {
+function Todo({ todo, todoList, setTodoList, setTodo }) {
   const [complete, setComplete] = useState(false);
   const [editando, setEditando] = useState(false);
   const handleComplete = () => {
-    if (!editando) {
-      setComplete(!complete);
-    }
+    setComplete(!complete);
+    let nuevoObjeto = {
+      text: todo.text,
+      id: todo.id,
+      completado: !todo.completado,
+    };
+    const todoActualizados = todoList.map((todoState) =>
+      todoState.id === todo.id ? nuevoObjeto : todoState
+    );
+
+    setTodoList(todoActualizados);
   };
 
   const handleDelete = (id) => {
@@ -39,7 +47,7 @@ function Todo({ todo, todoList, setTodoList }) {
 
   return (
     <div className="flex w-full justify-center  align-middle">
-      {!complete ? (
+      {!todo.completado ? (
         <div className=" h-auto rounded-l-lg w-16 flex justify-center my-auto">
           <AiOutlineEdit
             className="text-yellow-600  font-bold hover:text-yellow-900 hover:cursor-pointer "
@@ -52,7 +60,7 @@ function Todo({ todo, todoList, setTodoList }) {
       )}
       <div
         className={`flex w-96  hover:cursor-pointer my-5 py-10 font-black justify-center ${
-          complete
+          todo.completado
             ? `hover:bg-green-900 bg-green-500`
             : ` hover:bg-slate-300 bg-slate-400 font-black `
         } shadow-xl rounded-lg`}

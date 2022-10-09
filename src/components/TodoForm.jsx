@@ -16,6 +16,7 @@ function TodoForm({ todo, setTodo, todoList, setTodoList }) {
     let todoNuevo = {
       text: todo,
       id: generarId(),
+      completado: false,
     };
     setTodoList([...todoList, todoNuevo]);
     setTodo('');

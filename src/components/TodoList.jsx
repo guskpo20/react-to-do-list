@@ -17,6 +17,7 @@ function TodoList({ setTodo, todoList, eliminarTodo, setTodoList }) {
               key={todo.id}
               todoList={todoList}
               setTodoList={setTodoList}
+              setTodo={setTodo}
             />
           ))}
         </>
