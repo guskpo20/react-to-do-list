@@ -13,7 +13,7 @@
  
  ## General Info
 ***
-Web application that allows you to list goals and mark the ones you have completed. This project is 100% mine, I did it to practice what I had learned in the react course (with projects like the administrator and the expense planner). It uses localStorage.
+This is a simple web application that allows users to list their goals and mark them as completed. It was developed as part of my learning process during a React course, alongside other projects like the appointment manager and expense planner. The app uses localStorage to persist data between sessions.
 
 
 ## Technologies
@@ -26,10 +26,3 @@ A list of technologies used within the project:
  ## Installation
   Theres no installation, you can find it here: https://helpful-kheer-2d9093.netlify.app
   
-  
-  ## Collaboration
-***
-Contact me or give instructions on how you want to collaborate with my project.
-> Maybe you want to write a quote in this part. 
-> It should go over several rows?
-> This is how you do it.
